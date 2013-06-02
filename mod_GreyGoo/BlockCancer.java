@@ -13,14 +13,9 @@ public class BlockCancer extends Block
 
     protected BlockCancer(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private void assimilate(World world, int i, int j, int k)
@@ -93,7 +88,7 @@ public class BlockCancer extends Block
                                 if (k1 < 3)
                                 {
                                     hasFood = true;
-                                    world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                                    world.setBlock(i + l, j + i1, k + j1, blockID);
                                     mod_GreyGoo.instance.spreadLimiter.Destroyerspreadlimiter(true);
                                     byte0 = -1;
                                 }
@@ -102,7 +97,7 @@ public class BlockCancer extends Block
                             if (world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockBlack.blockID && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockCancer.blockID && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockWall.blockID && Math.abs(l) + Math.abs(i1) + Math.abs(j1) < 5 && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockCleaner.blockID && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockBlack.blockID && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockCancer2.blockID && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockTGD.blockID && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockTGDinert.blockID && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockInert.blockID && !mod_GreyGoo.gooNeverEatThese.contains(world.getBlockId(i + l, j + i1, k + j1)))
                             {
                             	hasFood = true;
-                                world.setBlockWithNotify(i + l, j + i1, k + j1, 0);
+                                world.setBlock(i + l, j + i1, k + j1, 0);
                             }
                         }
 
@@ -127,13 +122,13 @@ public class BlockCancer extends Block
 
                 if (hasTicked)
                 {
-                    world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockBlack.blockID);
+                    world.setBlock(i, j, k, mod_GreyGoo.BlockBlack.blockID);
                 }
             }
 
             if (!hasFood)
             {
-                world.setBlockMetadata(i, j, k, 2);
+                world.setBlock(i, j, k, 2);
             }
         
     }

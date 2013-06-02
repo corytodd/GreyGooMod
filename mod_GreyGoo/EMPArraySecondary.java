@@ -10,13 +10,8 @@ public class EMPArraySecondary extends Block
 {
     protected EMPArraySecondary(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(false);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     public int quantityDropped(Random par1Random)
@@ -120,7 +115,7 @@ public class EMPArraySecondary extends Block
 
         if (count == 18)
         {
-            world.setBlockWithNotify(i, j, k, mod_GreyGoo.EMPArrayID);
+            world.setBlock(i, j, k, mod_GreyGoo.EMPArrayID);
         }
 
         return false;

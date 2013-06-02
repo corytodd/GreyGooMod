@@ -16,14 +16,9 @@ public class BlockBlack extends BlockContainer
     Random rand = new Random();
     protected BlockBlack(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private void assimilate(World world, int i, int j, int k)
@@ -74,7 +69,7 @@ public class BlockBlack extends BlockContainer
 
                         if (world.getBlockId(i + k1, j + l1, k + i2) == mod_GreyGoo.BlockCleaner.blockID)
                         {
-                            world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockCleaner.blockID);
+                            world.setBlock(i, j, k, mod_GreyGoo.BlockCleaner.blockID);
                             l1 = 10;
                             i2 = 10;
                             k1 = 10;
@@ -87,7 +82,7 @@ public class BlockBlack extends BlockContainer
                             {
                                 if (rand.nextInt(60) == 1 && !(numberofdark > 15 && Math.abs(k1 + l1 + i2) < 3) && numberofdark < 100)
                                 {
-                                    world.setBlockWithNotify(i + k1, j + l1, k + i2, blockID);
+                                    world.setBlock(i + k1, j + l1, k + i2, blockID);
                                     hasFood = true;
                                     mod_GreyGoo.instance.spreadLimiter.Destroyerspreadlimiter(true);
                                 }
@@ -109,7 +104,7 @@ public class BlockBlack extends BlockContainer
 
             if (!hasFood)
             {
-                world.setBlockMetadata(i, j, k, 2);
+                world.setBlock(i, j, k, 2);
                 world.removeBlockTileEntity(i, j, k);
             }
         

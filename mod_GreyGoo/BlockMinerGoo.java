@@ -11,14 +11,9 @@ public class BlockMinerGoo extends Block
 {
     protected BlockMinerGoo(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     protected void mine(World world, int i, int j, int k)
@@ -46,7 +41,7 @@ public class BlockMinerGoo extends Block
                             continue;
                         }
 
-                        world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                        world.setBlock(i + l, j + i1, k + j1, blockID);
                         hasFood = true;
                         mod_GreyGoo.instance.spreadLimiter.spreadLimiter(true);
                     }
@@ -59,7 +54,7 @@ public class BlockMinerGoo extends Block
 
             if (!hasFood)
             {
-                world.setBlockMetadata(i, j, k, 2);
+                world.setBlock(i, j, k, 2);
             }
         }
     }

@@ -30,14 +30,9 @@ public class Assembler extends BlockContainer
 
     protected Assembler(int par1, int textureIndex, boolean par2)
     {
-        super(par1, textureIndex, Material.rock);
+        super(par1, Material.rock);
         this.isActive = par2;
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     public int idDropped(int par1, Random par2Random, int par3)
@@ -81,7 +76,7 @@ public class Assembler extends BlockContainer
                 var9 = 4;
             }
 
-            par1World.setBlockMetadataWithNotify(par2, par3, par4, var9);
+            par1World.setBlock(par2, par3, par4, var9);
         }
     }
 
@@ -121,10 +116,10 @@ public class Assembler extends BlockContainer
         }
     }
 
-    public int getBlockTextureFromSide(int par1)
-    {
-        return par1 == 1 ? 51 : (par1 == 0 ? 51 : (par1 == 3 ? 50 : 50));
-    }
+//    public int getBlockTextureFromSide(int par1)
+//    {
+//        return par1 == 1 ? 51 : (par1 == 0 ? 51 : (par1 == 3 ? 50 : 50));
+//    }
 
     public boolean onBlockActivated(World par1World, int x, int y, int z, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
     {
@@ -155,15 +150,15 @@ public class Assembler extends BlockContainer
 
         if (par0)
         {
-            par1World.setBlockWithNotify(par2, par3, par4, mod_GreyGoo.Assembler.blockID);
+            par1World.setBlock(par2, par3, par4, mod_GreyGoo.Assembler.blockID);
         }
         else
         {
-            par1World.setBlockWithNotify(par2, par3, par4, mod_GreyGoo.Assembler.blockID);
+            par1World.setBlock(par2, par3, par4, mod_GreyGoo.Assembler.blockID);
         }
 
         keepAssemblerInventory = false;
-        par1World.setBlockMetadataWithNotify(par2, par3, par4, var5);
+        par1World.setBlock(par2, par3, par4, var5);
 
         if (var6 != null)
         {
@@ -183,22 +178,22 @@ public class Assembler extends BlockContainer
 
         if (var6 == 0)
         {
-            par1World.setBlockMetadataWithNotify(par2, par3, par4, 2);
+            par1World.setBlock(par2, par3, par4, 2);
         }
 
         if (var6 == 1)
         {
-            par1World.setBlockMetadataWithNotify(par2, par3, par4, 5);
+            par1World.setBlock(par2, par3, par4, 5);
         }
 
         if (var6 == 2)
         {
-            par1World.setBlockMetadataWithNotify(par2, par3, par4, 3);
+            par1World.setBlock(par2, par3, par4, 3);
         }
 
         if (var6 == 3)
         {
-            par1World.setBlockMetadataWithNotify(par2, par3, par4, 4);
+            par1World.setBlock(par2, par3, par4, 4);
         }
     }
 
@@ -234,7 +229,7 @@ public class Assembler extends BlockContainer
 
                             if (var9.hasTagCompound())
                             {
-                                var14.func_92014_d().setTagCompound((NBTTagCompound)var9.getTagCompound().copy());
+                                var14.getEntityItem().setTagCompound((NBTTagCompound)var9.getTagCompound().copy());
                             }
                             
                             float var15 = 0.05F;

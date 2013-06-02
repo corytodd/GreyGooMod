@@ -118,7 +118,7 @@ public class TileEntityEMPArray extends TileEntity
             {
             	try
             	{
-            		this.worldObj.setBlockWithNotify(xCoord, yCoord, zCoord, mod_GreyGoo.EMPArraySecondaryID);
+            		this.worldObj.setBlock(xCoord, yCoord, zCoord, mod_GreyGoo.EMPArraySecondaryID);
             		clearEMPArrayTileEntity();
             	}
             	catch(NullPointerException e)
@@ -142,7 +142,7 @@ public class TileEntityEMPArray extends TileEntity
         	{
         		
         		 mod_GreyGoo.inactiveGooList.put(this.worldObj.getBlockId(this.xCoord, yCoord + 3, zCoord),this.worldObj.provider.dimensionId);
-                 this.worldObj.setBlockWithNotify(xCoord, yCoord + 2, zCoord, 0);
+                 this.worldObj.setBlock(xCoord, yCoord + 2, zCoord, 0);
                  mod_GreyGoo.instance.proxy.printStringClient("Activated");
         	}
            
@@ -160,7 +160,7 @@ public class TileEntityEMPArray extends TileEntity
         if (this.worldObj.getBlockId(this.xCoord, yCoord + 3, zCoord) == mod_GreyGoo.BlockSubstrateID)
         {
             mod_GreyGoo.instance.inactiveGooList.clear();
-            this.worldObj.setBlockWithNotify(xCoord, yCoord + 3, zCoord, 0);
+            this.worldObj.setBlock(xCoord, yCoord + 3, zCoord, 0);
             mod_GreyGoo.instance.proxy.printStringClient("EMP Reset");
         }
 

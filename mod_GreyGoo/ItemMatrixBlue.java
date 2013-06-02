@@ -13,9 +13,4 @@ public class ItemMatrixBlue extends Item
         this.setCreativeTab(CreativeTabs.tabMaterials);
     }
 
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooItemTextures.png";
-    }
 }

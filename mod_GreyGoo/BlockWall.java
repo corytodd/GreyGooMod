@@ -14,17 +14,11 @@ public class BlockWall extends Block
 
     protected BlockWall(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         grew1 = 0;
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
-    }
-
     private int numgen4(Random random)
     {
         int i = random.nextInt(4);
@@ -80,7 +74,7 @@ public class BlockWall extends Block
                         {
                             if (Math.abs(l) + Math.abs(i1) + Math.abs(j1) < 2 && world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockInert.blockID && (!mod_GreyGoo.gooNeverEatThese.contains(world.getBlockId(i + l, j + i1, k + j1)) || (world.getBlockId(i + l, j + i1, k + j1) == Block.snow.blockID)))
                             {
-                                world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                                world.setBlock(i + l, j + i1, k + j1, blockID);
                                 mod_GreyGoo.instance.spreadLimiter.spreadLimiter(true);
 
                                 if (rand.nextBoolean() && rand.nextBoolean() && rand.nextBoolean() && rand.nextBoolean())
@@ -98,7 +92,7 @@ public class BlockWall extends Block
 
             if (!hasFood)
             {
-                world.setBlockMetadata(i, j, k, 2);
+                world.setBlock(i, j, k, 2);
             }
         }
     }
@@ -109,7 +103,7 @@ public class BlockWall extends Block
         if (!entityplayer.isSneaking() && !world.isRemote)
         	
         {
-        	world.setBlockMetadata(i, j, k, 0);
+        	world.setBlock(i, j, k, 0);
             grow(world,i, j, k,rand);
             return true;
         }

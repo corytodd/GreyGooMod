@@ -13,19 +13,10 @@ public class BlockGravityGoo extends Block
     private  boolean fallInstantly = false;
     
     private Random random = new Random();
-   
-
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
-    }
-
-   
-
+  
     public BlockGravityGoo(int par1, int par2)
     {
-        super(par1, par2, Material.sand);
+        super(par1, Material.sand);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.setTickRandomly(false);
     }
@@ -96,7 +87,7 @@ public class BlockGravityGoo extends Block
                         if (!par1World.isRemote && flag == true )
                         {
                             mod_GreyGoo.instance.spreadLimiter.numberoffallingLimiter(true);
-                            par1World.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            par1World.setBlock(i + l, j + i1, k + j1, blockID);
                         }
                     }
                 }
@@ -144,7 +135,7 @@ public class BlockGravityGoo extends Block
             }
         }
       
-        	par1World.setBlockWithNotify(par2, par3, par4, 0);
+        	par1World.setBlock(par2, par3, par4, 0);
         
     }
 

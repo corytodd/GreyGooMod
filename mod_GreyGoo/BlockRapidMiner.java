@@ -11,14 +11,9 @@ public class BlockRapidMiner extends Block
 {
     protected BlockRapidMiner(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private Random random = new Random();
@@ -49,7 +44,7 @@ public class BlockRapidMiner extends Block
                         }
                         else
                         {
-                            world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            world.setBlock(i + l, j + i1, k + j1, blockID);
                         }
 
                         world.scheduleBlockUpdate(i + l, j + i1, k + j1, blockID, random.nextInt(18)+random.nextInt(4));

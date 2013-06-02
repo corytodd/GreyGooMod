@@ -16,17 +16,11 @@ public class GooPortal extends BlockContainer
     public World world;
     protected GooPortal(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
-    }
-
-   
+ 
 
     public TileEntity createNewTileEntity(World par1World)
     {

@@ -12,14 +12,9 @@ public class BlockAirEater extends Block
 {
     protected BlockAirEater(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private void assimilate(World world, int i, int j, int k)
@@ -32,7 +27,7 @@ public class BlockAirEater extends Block
            
                         if (thisHelper.findBlocks().size()!=0)
                         {
-                            world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockCleaner.blockID);
+                            world.setBlock(i, j, k, mod_GreyGoo.BlockCleaner.blockID);
                         }
                         thisHelper.clearIDCheckList();
                         thisHelper.addID(0);
@@ -46,7 +41,7 @@ public class BlockAirEater extends Block
                         	
                         	if (world.getBlockLightValue(coords.xCoord, coords.yCoord, coords.zCoord) > 6)
                         	{
-                        		world.setBlockWithNotify(coords.xCoord, coords.yCoord, coords.zCoord, blockID);
+                        		world.setBlock(coords.xCoord, coords.yCoord, coords.zCoord, blockID);
                         		hasFood = true;
                         		mod_GreyGoo.instance.spreadLimiter.spreadLimiter(true);
                         	}
@@ -55,7 +50,7 @@ public class BlockAirEater extends Block
                     
             if (!hasFood)
             {
-                world.setBlockMetadata(i, j, k, 2);
+                world.setBlock(i, j, k, 2);
             }
         }
     }

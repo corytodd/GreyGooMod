@@ -90,7 +90,7 @@ public class EntityFallingGravityGoo extends Entity
                 {
                     if (this.fallTime == 1)
                     {
-                        this.worldObj.setBlockWithNotify(var1, var2, var3, 0);
+                        this.worldObj.setBlock(var1, var2, var3, 0);
                     }
                     else
                     {
@@ -105,7 +105,7 @@ public class EntityFallingGravityGoo extends Entity
                     this.motionY *= -0.5D;
 
                     if (this.worldObj.getBlockId(var1, var2, var3) != Block.pistonMoving.blockID && !worldObj.isRemote)
-                    {	this.worldObj.setBlockWithNotify(var1, var2, var3, this.blockID);
+                    {	this.worldObj.setBlock(var1, var2, var3, this.blockID);
                         this.worldObj.scheduleBlockUpdate(var1, var2, var3, mod_GreyGoo.BlockGravityGooID,  1 );
                         //BlockGravityGoo.canFallBelow(this.worldObj, var1, var2 - 1, var3);
                         

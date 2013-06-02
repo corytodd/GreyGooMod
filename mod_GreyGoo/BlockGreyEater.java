@@ -15,14 +15,9 @@ public class BlockGreyEater extends Block
     private int thisMetaData;
     protected BlockGreyEater(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private void assimilate(World world, int i, int j, int k)
@@ -57,39 +52,39 @@ public class BlockGreyEater extends Block
 
                             if (blockToEat == Block.waterStill.blockID)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 5);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 5, 2);
                             }
                             else if (blockToEat == Block.gravel.blockID)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 3);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 3, 2);
                             }
                             else if (blockToEat == Block.sand.blockID)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 3);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 3, 2);
                             }
                             else if (blockToEat == Block.oreIron.blockID)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 7);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 7, 2);
                             }
                             else if (blockToEat == Block.oreCoal.blockID)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 7);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 7, 2);
                             }
                             else if (blockToEat == Block.leaves.blockID)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 4);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 4, 2);
                             }
                             else if (blockToEat == Block.wood.blockID)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 4);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 4, 2);
                             }
                             else if (world.isAirBlock(i + l, j + i1 + 1, k + j1) && rand.nextInt(5) == 1)
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 8);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 8, 2);
                             }
                             else
                             {
-                                world.setBlockAndMetadataWithNotify(i + l, j + i1, k + j1, blockID, 0);
+                                world.setBlock(i + l, j + i1, k + j1, blockID, 0, 2);
                             }
                         }
                     }
@@ -111,47 +106,47 @@ public class BlockGreyEater extends Block
 
         if (chance1 == 1)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 1);
+            world.setBlock(i, j, k, 1);
         }
 
         if (chance1 == 2)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 2);
+            world.setBlock(i, j, k, 2);
         }
 
         if (chance2 == 3)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 3);
+            world.setBlock(i, j, k, 3);
         }
 
         if (chance2 == 4)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 4);
+            world.setBlock(i, j, k, 4);
         }
 
         if (chance2 == 5)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 5);
+            world.setBlock(i, j, k, 5);
         }
 
         if (chance1 == 6)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 6);
+            world.setBlock(i, j, k, 6);
         }
 
         if (chance2 == 7)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 7);
+            world.setBlock(i, j, k, 7);
         }
 
         if (chance1 == 8)
         {
-            world.setBlockMetadataWithNotify(i, j, k, 8);
+            world.setBlock(i, j, k, 8);
         }
 
         if (chance3 == 9)
         {
-            world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockCancerID);
+            world.setBlock(i, j, k, mod_GreyGoo.BlockCancerID);
         }
 
         super.onBlockAdded(world, i, j, k);
@@ -250,10 +245,11 @@ public class BlockGreyEater extends Block
         return getRenderColor(iblockaccess.getBlockMetadata(i, j, k));
     }
 
-    public int getBlockTextureFromSideAndMetadata(int par1, int par2)
-    {
-        return this.blockIndexInTexture;
-    }
+  //Deprecated @ 1.5.1//Deprecated @ 1.5.1
+//    public int getBlockTextureFromSideAndMetadata(int par1, int par2)
+//    {
+//        return this.blockIndexInTexture;
+//    }
 
     public void updateTick(World world, int i, int j, int k, Random random)
     {
@@ -264,7 +260,7 @@ public class BlockGreyEater extends Block
             {
             	 if (random.nextInt(10000) == 9)
                  {
-                     world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockCancerID);
+                     world.setBlock(i, j, k, mod_GreyGoo.BlockCancerID);
                  }
             	 else
             	 {

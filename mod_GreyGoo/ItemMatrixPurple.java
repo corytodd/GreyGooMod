@@ -12,9 +12,4 @@ public class ItemMatrixPurple extends Item
         this.setMaxDamage(0);
         this.setCreativeTab(CreativeTabs.tabMaterials);
     }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooItemTextures.png";
-    }
 }

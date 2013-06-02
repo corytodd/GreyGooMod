@@ -23,66 +23,66 @@ public class ClientProxy extends CommonProxy
 	public void loadTextures()
 	{
 
-		mod_GreyGoo.ItemNanoLens.setIconIndex(62).setItemName("NanoLens");  
+		/*mod_GreyGoo.ItemNanoLens.setIconIndex(62).setUnlocalizedName("NanoLens");  
 		    
-	    mod_GreyGoo.ItemNanoLathe.setIconIndex(63).setItemName("NanoLathe");  
+	    mod_GreyGoo.ItemNanoLathe.setIconIndex(63).setUnlocalizedName("NanoLathe");  
 
-	    mod_GreyGoo.ItemModifierGrey.setIconIndex(31).setItemName("erfgdsfsdfg");  
+	    mod_GreyGoo.ItemModifierGrey.setIconIndex(31).setUnlocalizedName("erfgdsfsdfg");  
 
-	    mod_GreyGoo.ItemModifierRed.setIconIndex(45).setItemName("erfgsdfg");  
+	    mod_GreyGoo.ItemModifierRed.setIconIndex(45).setUnlocalizedName("erfgsdfg");  
 	    
-	    mod_GreyGoo.ItemModifierYellow.setIconIndex(47).setItemName("Browadfanwgoo");  
+	    mod_GreyGoo.ItemModifierYellow.setIconIndex(47).setUnlocalizedName("Browadfanwgoo");  
 
-	    mod_GreyGoo.ItemModifierPurple.setIconIndex(44).setItemName("aerew");  
+	    mod_GreyGoo.ItemModifierPurple.setIconIndex(44).setUnlocalizedName("aerew");  
 
-	    mod_GreyGoo.ItemModifierOrange.setIconIndex(43).setItemName("ererw");  
+	    mod_GreyGoo.ItemModifierOrange.setIconIndex(43).setUnlocalizedName("ererw");  
 
-	    mod_GreyGoo.ItemModifierBlue.setIconIndex(28).setItemName("adfadf"); 
+	    mod_GreyGoo.ItemModifierBlue.setIconIndex(28).setUnlocalizedName("adfadf"); 
 	    
-	    mod_GreyGoo.ItemModifierWhite.setIconIndex(46).setItemName("adadd"); 
+	    mod_GreyGoo.ItemModifierWhite.setIconIndex(46).setUnlocalizedName("adadd"); 
 	    
-	    mod_GreyGoo.ItemModifierGreen.setIconIndex(30).setItemName("adfa");  
+	    mod_GreyGoo.ItemModifierGreen.setIconIndex(30).setUnlocalizedName("adfa");  
 	    
-	    mod_GreyGoo.ItemModifierBrown.setIconIndex(29).setItemName("Brownwgoo");
+	    mod_GreyGoo.ItemModifierBrown.setIconIndex(29).setUnlocalizedName("Brownwgoo");
 	   
 	    
-		mod_GreyGoo.ItemMatrixRainbow.setIconIndex(61).setItemName("Rainbow Matrix");  
+		mod_GreyGoo.ItemMatrixRainbow.setIconIndex(61).setUnlocalizedName("Rainbow Matrix");  
 
-	    mod_GreyGoo.ItemMatrixRed.setIconIndex(38).setItemName("erfgsd4fg");  
+	    mod_GreyGoo.ItemMatrixRed.setIconIndex(38).setUnlocalizedName("erfgsd4fg");  
 	    
-	    mod_GreyGoo.ItemMatrixYellow.setIconIndex(41).setItemName("Browad4fanwgoo");  
+	    mod_GreyGoo.ItemMatrixYellow.setIconIndex(41).setUnlocalizedName("Browad4fanwgoo");  
 
-	    mod_GreyGoo.ItemMatrixPurple.setIconIndex(34).setItemName("ae4rew");  
+	    mod_GreyGoo.ItemMatrixPurple.setIconIndex(34).setUnlocalizedName("ae4rew");  
 
-	    mod_GreyGoo.ItemMatrixOrange.setIconIndex(17).setItemName("er4erw");  
+	    mod_GreyGoo.ItemMatrixOrange.setIconIndex(17).setUnlocalizedName("er4erw");  
 
-	    mod_GreyGoo.ItemMatrixBlue.setIconIndex(9).setItemName("adf4adf"); 
+	    mod_GreyGoo.ItemMatrixBlue.setIconIndex(9).setUnlocalizedName("adf4adf"); 
 	    
-	    mod_GreyGoo.ItemMatrixWhite.setIconIndex(39).setItemName("a4dadd"); 
+	    mod_GreyGoo.ItemMatrixWhite.setIconIndex(39).setUnlocalizedName("a4dadd"); 
 	    
-	    mod_GreyGoo.ItemMatrixGreen.setIconIndex(20).setItemName("ad4fa");  
+	    mod_GreyGoo.ItemMatrixGreen.setIconIndex(20).setUnlocalizedName("ad4fa");  
 	    
-	    mod_GreyGoo.ItemMatrixBrown.setIconIndex(25).setItemName("Bro4wnwgoo"); 
+	    mod_GreyGoo.ItemMatrixBrown.setIconIndex(25).setUnlocalizedName("Bro4wnwgoo"); 
 	    
-	    mod_GreyGoo.ItemMatrixWhiteGreen.setIconIndex(1).setItemName("a4dffdadd"); 
+	    mod_GreyGoo.ItemMatrixWhiteGreen.setIconIndex(1).setUnlocalizedName("a4dffdadd"); 
 	    
-	    mod_GreyGoo.ItemMatrixBrownRed.setIconIndex(21).setItemName("a4ggffdadd"); 
+	    mod_GreyGoo.ItemMatrixBrownRed.setIconIndex(21).setUnlocalizedName("a4ggffdadd"); 
 	    
-	    mod_GreyGoo.ItemMatrixBlueRed.setIconIndex(22).setItemName("a4dghdadd"); 
+	    mod_GreyGoo.ItemMatrixBlueRed.setIconIndex(22).setUnlocalizedName("a4dghdadd"); 
 	    
-	    mod_GreyGoo.ItemMatrixOrangeRed .setIconIndex(16).setItemName("a4wwghgdadd"); 
+	    mod_GreyGoo.ItemMatrixOrangeRed .setIconIndex(16).setUnlocalizedName("a4wwghgdadd"); 
 
-	    mod_GreyGoo.ItemMatrixOrangeWhite .setIconIndex(32).setItemName("a4ghrergdadd"); 
+	    mod_GreyGoo.ItemMatrixOrangeWhite .setIconIndex(32).setUnlocalizedName("a4ghrergdadd"); 
 
-	    mod_GreyGoo.ItemMatrixOrangePurple.setIconIndex(35).setItemName("a4ereghgdadd"); 
+	    mod_GreyGoo.ItemMatrixOrangePurple.setIconIndex(35).setUnlocalizedName("a4ereghgdadd"); 
 
-	    mod_GreyGoo.ItemMatrixYellowRed .setIconIndex(15).setItemName("Browad4fanwswegoo");  
+	    mod_GreyGoo.ItemMatrixYellowRed .setIconIndex(15).setUnlocalizedName("Browad4fanwswegoo");  
 
-	    mod_GreyGoo.ItemMatrixPurpleRed.setIconIndex(36).setItemName("Browad4fasfnwswegoo");  
+	    mod_GreyGoo.ItemMatrixPurpleRed.setIconIndex(36).setUnlocalizedName("Browad4fasfnwswegoo");  
 
-	    mod_GreyGoo.ItemMatrixGrey.setIconIndex(0).setItemName("Browad4fasfnwserwerwegoo");  
+	    mod_GreyGoo.ItemMatrixGrey.setIconIndex(0).setUnlocalizedName("Browad4fasfnwserwerwegoo");  
 
-	    mod_GreyGoo.ItemMatrixGreenRed .setIconIndex(2).setItemName("a4dghasddadd"); 
+	    mod_GreyGoo.ItemMatrixGreenRed .setIconIndex(2).setUnlocalizedName("a4dghasddadd"); */
 	}
 	@Override
 	public  void printStringClient(String string)

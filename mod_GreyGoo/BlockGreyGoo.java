@@ -11,14 +11,9 @@ public class BlockGreyGoo extends Block
 {
     protected BlockGreyGoo(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private void assimilate(World world, int i, int j, int k)
@@ -58,7 +53,7 @@ public class BlockGreyGoo extends Block
                         	//mod_GreyGoo.instance.proxy.printStringClient(String.valueOf(size));
 
                     		 hold= (CoordHolder)thisHelper.foundBlockCoords.get(size);
-                    		 world.setBlockWithNotify(hold.xCoord,hold.yCoord, hold.zCoord, blockID);
+                    		 world.setBlock(hold.xCoord,hold.yCoord, hold.zCoord, blockID);
                              hasFood = true;
                              mod_GreyGoo.instance.spreadLimiter.spreadLimiter(true);
                              size--;
@@ -71,7 +66,7 @@ public class BlockGreyGoo extends Block
 
             if (!hasFood)
             {
-                world.setBlockMetadata(i, j, k, 2);
+                world.setBlock(i, j, k, 2);
             }
         }
     }

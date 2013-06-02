@@ -148,8 +148,8 @@ public class TileEntityGooPortal extends TileEntity
 				coordEMP=(CoordHolder)EMPblocks.get(timer);
 				
 				
-					destinationDim.setBlockWithNotify(coordEMP.xCoord, coordEMP.yCoord, coordEMP.zCoord, mod_GreyGoo.EMPArraySecondary.blockID);
-					this.worldObj.setBlockWithNotify(coordEMP.xCoord, coordEMP.yCoord, coordEMP.zCoord, mod_GreyGoo.EMPArraySecondary.blockID);
+					destinationDim.setBlock(coordEMP.xCoord, coordEMP.yCoord, coordEMP.zCoord, mod_GreyGoo.EMPArraySecondary.blockID);
+					this.worldObj.setBlock(coordEMP.xCoord, coordEMP.yCoord, coordEMP.zCoord, mod_GreyGoo.EMPArraySecondary.blockID);
 					
 					
 					timer++;
@@ -170,8 +170,8 @@ public class TileEntityGooPortal extends TileEntity
 					
 					
 					
-				destinationDim.setBlockWithNotify(coordInert.xCoord, coordInert.yCoord, coordInert.zCoord, mod_GreyGoo.BlockInert.blockID);
-						this.worldObj.setBlockWithNotify(coordInert.xCoord, coordInert.yCoord, coordInert.zCoord, mod_GreyGoo.BlockInert.blockID);
+				destinationDim.setBlock(coordInert.xCoord, coordInert.yCoord, coordInert.zCoord, mod_GreyGoo.BlockInert.blockID);
+						this.worldObj.setBlock(coordInert.xCoord, coordInert.yCoord, coordInert.zCoord, mod_GreyGoo.BlockInert.blockID);
 						timer1++;
 						
 					
@@ -190,15 +190,15 @@ public class TileEntityGooPortal extends TileEntity
 						
 						
 						{
-							destinationDim.setBlockWithNotify(coordElse.xCoord, coordElse.yCoord, coordElse.zCoord, 0);
-							this.worldObj.setBlockWithNotify(coordElse.xCoord, coordElse.yCoord, coordElse.zCoord, 0);
+							destinationDim.setBlock(coordElse.xCoord, coordElse.yCoord, coordElse.zCoord, 0);
+							this.worldObj.setBlock(coordElse.xCoord, coordElse.yCoord, coordElse.zCoord, 0);
 							timer2++;
 						
 						}
 					}
 					else if(inertDone)
 					{
-						this.worldObj.setBlockMetadata(xCoord, yCoord, zCoord, 1);
+						this.worldObj.setBlock(xCoord, yCoord, zCoord, 1);
 						sendCounter=200;
 						
 					}
@@ -252,8 +252,8 @@ public class TileEntityGooPortal extends TileEntity
 			
     		sendCounter=1;
     		
-    			destinationDim.setBlockWithNotify(xCoord, yCoord, zCoord, mod_GreyGoo.GooPortalID);
-    			destinationDim.setBlockMetadata(xCoord, yCoord, zCoord, 1);
+    			destinationDim.setBlock(xCoord, yCoord, zCoord, mod_GreyGoo.GooPortalID);
+    			destinationDim.setBlock(xCoord, yCoord, zCoord, 1);
     		}
     	}
     			if(this.worldObj.getBlockMetadata(xCoord, yCoord, zCoord)!=1)
@@ -305,7 +305,7 @@ public class TileEntityGooPortal extends TileEntity
 			{
 				mod_GreyGoo.proxy.printStringClient(String.valueOf(list.size()));
     			mod_GreyGoo.proxy.printStringClient("Teleporter Array damaged- try again");
-    			//this.worldObj.setBlockMetadata(xCoord, yCoord, zCoord, 0);
+    			//this.worldObj.setBlock(xCoord, yCoord, zCoord, 0);
     			
 			}
 			else if(this.worldObj.getClosestPlayer(this.xCoord, this.yCoord, this.zCoord, 4)==null)

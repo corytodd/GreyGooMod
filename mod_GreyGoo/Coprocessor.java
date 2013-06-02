@@ -7,13 +7,8 @@ public class Coprocessor extends Block
 {
     protected Coprocessor(int par1, int textureIndex, boolean par2)
     {
-        super(par1, textureIndex, Material.rock);
+        super(par1, Material.rock);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
 
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
-    }
 }

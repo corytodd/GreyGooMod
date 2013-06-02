@@ -276,7 +276,7 @@ public class TileEntityProgrammer extends TileEntity implements IInventory, ISid
 
                     if (this.ProgrammerItemStacks[1].getItem().itemID == this.ProgrammerItemStacks[0].getItem().itemID)
                     {
-                        mod_GreyGoo.BlockFreezer.blockIndexInTexture = 11;
+                        //mod_GreyGoo.BlockFreezer.blockIndexInTexture = 11;
                         mod_GreyGoo.BlockFreezer.setLightValue(0.5F);
                         mod_GreyGoo.instance.FreezerLight = 0.5;
                         mod_GreyGoo.instance.FreezerOpacity = block.lightOpacity[mod_GreyGoo.BlockInert.blockID];
@@ -285,8 +285,8 @@ public class TileEntityProgrammer extends TileEntity implements IInventory, ISid
                     }
                     else
                     {
-                        mod_GreyGoo.BlockFreezer.blockIndexInTexture = block.blockIndexInTexture;
-                        mod_GreyGoo.instance.FreezerTexture = block.blockIndexInTexture;
+                        //mod_GreyGoo.BlockFreezer.blockIndexInTexture = block.blockIndexInTexture;
+                        //mod_GreyGoo.instance.FreezerTexture = block.blockIndexInTexture;
                         mod_GreyGoo.BlockFreezer.setLightValue(block.lightValue[block.blockID]);
                         mod_GreyGoo.instance.FreezerLight = block.lightValue[block.blockID];
                         mod_GreyGoo.instance.FreezerOpacity = block.lightOpacity[block.blockID];
@@ -369,4 +369,16 @@ public class TileEntityProgrammer extends TileEntity implements IInventory, ISid
     {
         return 1;
     }
+
+	@Override
+	public boolean isInvNameLocalized() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

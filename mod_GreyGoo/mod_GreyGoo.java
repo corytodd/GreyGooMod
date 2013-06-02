@@ -182,7 +182,7 @@ public class mod_GreyGoo
        Property myststrin= new Property("IntegerList","",Property.Type.STRING);
        myststrin= config.get("STRING", "List of ages that goos can spread in, only applies if mystCraftAgeOnly=true. List of comma separated ints, <3,7,6,9>", "");
         //this.mystcraftAgeWhitelist
-       String values = myststrin.value;
+       String values = myststrin.getValue();
        String compiled="";
        
        int size = values.length();
@@ -515,75 +515,75 @@ public class mod_GreyGoo
     public void Init(FMLInitializationEvent event)
 
     {
-    	BlockRestorer = (new BlockRestorer(BlockRestorerID, 9)).setHardness(0.0F).setLightValue(1.0F).setBlockName("RainbowGoo");
+    	BlockRestorer = (new BlockRestorer(BlockRestorerID, 9)).setHardness(0.0F).setLightValue(1.0F).setUnlocalizedName("RainbowGoo");
 
-        BlockFreezer = (new BlockFreezer(BlockFreezerID, 11)).setHardness(0.0F).setLightValue(0.5F).setBlockName("Green-RedGoo");
-        BlockGreyGoo = (new BlockGreyGoo(BlockGreyGooID, 8)).setHardness(0.0F).setLightValue(0.625F).setBlockName("PurpleGoo");
-        BlockCancer = (new BlockCancer(BlockCancerID, 1)).setHardness(0.0F).setLightValue(0.625F).setBlockName("Tumor");
-        BlockCancer2 = (new BlockCancer2(BlockCancer2ID, 0)).setHardness(0.0F).setLightValue(0.225F).setBlockName("Plague");
-        BlockTGD = (new BlockTGD(BlockTGDID, 10)).setHardness(1.0F).setLightValue(0.825F).setBlockName("TheGreatDestroyer");
-        BlockTGDinert = (new BlockTGDinert(BlockTGDinertID, 14)).setHardness(0.0F).setLightValue(0.225F).setBlockName("Inert Destroyer ");
-        BlockCleaner = (new BlockCleaner(BlockCleanerID, 13)).setHardness(0.0F).setLightValue(1.0F).setBlockName("RedGoo");
-        BlockWall = (new BlockWall(BlockWallID, 12)).setBlockUnbreakable().setLightValue(0.4F).setBlockName("OrangeGoo");
-        BlockInert = (new BlockInert(BlockInertID, 19)).setHardness(0.0F).setLightValue(0.1F).setBlockName("GreenGoo");
-        BlockWaterEater = (new BlockWaterEater(BlockWaterEaterID, 4)).setHardness(0.0F).setLightValue(0.6F).setBlockName("BlueGoo");
-        BlockAirEater = (new BlockAirEater(BlockAirEaterID, 15)).setHardness(0.0F).setLightValue(0.1F).setBlockName("WhiteGoo");
-        BlockGreyEater = (new BlockGreyEater(BlockGreyEaterID, 18)).setHardness(0.0F).setLightValue(0.4F).setBlockName("GreyGoo");
-        BlockMinerGoo = (new BlockMinerGoo(BlockMinerGooID, 6)).setHardness(0.0F).setLightValue(0.9F).setBlockName("MinerGoo");
-        BlockElevatorGoo = (new BlockElevatorGoo(BlockElevatorGooID, 0)).setHardness(0.0F).setLightValue(0.5F).setBlockName("ElevatorGoo");
-        BlockRapidMiner = (new BlockRapidMiner(BlockRapidMinerID, 3)).setHardness(0.0F).setLightValue(1.0F).setBlockName("Brown-RedGoo");
-        BlockBubble = (new BlockBubble(BlockBubbleID, 2)).setHardness(0.0F).setLightValue(0.1F).setBlockName("White-GreenGoo");
-        BlockOrangeRed = (new BlockOrangeRed(BlockOrangeRedID, 22)).setBlockUnbreakable().setLightValue(0.5F).setBlockName("OrangeRedGoo");
-        BlockOrangePurple = (new BlockOrangePurple(BlockOrangePurpleID, 21)).setBlockUnbreakable().setLightValue(0.5F).setBlockName("OrangePurpleGoo");
-        BlockOrangeWhite = (new BlockOrangeWhite(BlockOrangeWhiteID, 20)).setHardness(0.0F).setLightValue(0.5F).setBlockName("OrangeWhiteGoo");
-        BlockRapidEater = (new BlockRapidEater(BlockRapidEaterID, 23)).setHardness(0.0F).setLightValue(0.5F).setBlockName("PurpleRedGoo");
-        BlockBlack = (new BlockBlack(BlockBlackID, 16)).setHardness(0.0F).setLightValue(0.0F).setBlockName("Darkness");
-        BlockGravityGoo = (new BlockGravityGoo(BlockGravityGooID, 5)).setHardness(0.0F).setLightValue(0.5F).setBlockName("Yellow Goo");
-        BlockSubstrate = (new BlockSubstrate(BlockSubstrateID, 17).setHardness(0.0F).setLightValue(0.0F).setBlockName("fsgsfgyhewf"));
-        BlockRapidWaterEater = new BlockRapidWaterEater(BlockRapidWaterEaterID, 7).setHardness(0.0F).setLightValue(0.0F).setBlockName("fsgsfg897yhewf");
+        BlockFreezer = (new BlockFreezer(BlockFreezerID, 11)).setHardness(0.0F).setLightValue(0.5F).setUnlocalizedName("Green-RedGoo");
+        BlockGreyGoo = (new BlockGreyGoo(BlockGreyGooID, 8)).setHardness(0.0F).setLightValue(0.625F).setUnlocalizedName("PurpleGoo");
+        BlockCancer = (new BlockCancer(BlockCancerID, 1)).setHardness(0.0F).setLightValue(0.625F).setUnlocalizedName("Tumor");
+        BlockCancer2 = (new BlockCancer2(BlockCancer2ID, 0)).setHardness(0.0F).setLightValue(0.225F).setUnlocalizedName("Plague");
+        BlockTGD = (new BlockTGD(BlockTGDID, 10)).setHardness(1.0F).setLightValue(0.825F).setUnlocalizedName("TheGreatDestroyer");
+        BlockTGDinert = (new BlockTGDinert(BlockTGDinertID, 14)).setHardness(0.0F).setLightValue(0.225F).setUnlocalizedName("Inert Destroyer ");
+        BlockCleaner = (new BlockCleaner(BlockCleanerID, 13)).setHardness(0.0F).setLightValue(1.0F).setUnlocalizedName("RedGoo");
+        BlockWall = (new BlockWall(BlockWallID, 12)).setBlockUnbreakable().setLightValue(0.4F).setUnlocalizedName("OrangeGoo");
+        BlockInert = (new BlockInert(BlockInertID, 19)).setHardness(0.0F).setLightValue(0.1F).setUnlocalizedName("GreenGoo");
+        BlockWaterEater = (new BlockWaterEater(BlockWaterEaterID, 4)).setHardness(0.0F).setLightValue(0.6F).setUnlocalizedName("BlueGoo");
+        BlockAirEater = (new BlockAirEater(BlockAirEaterID, 15)).setHardness(0.0F).setLightValue(0.1F).setUnlocalizedName("WhiteGoo");
+        BlockGreyEater = (new BlockGreyEater(BlockGreyEaterID, 18)).setHardness(0.0F).setLightValue(0.4F).setUnlocalizedName("GreyGoo");
+        BlockMinerGoo = (new BlockMinerGoo(BlockMinerGooID, 6)).setHardness(0.0F).setLightValue(0.9F).setUnlocalizedName("MinerGoo");
+        BlockElevatorGoo = (new BlockElevatorGoo(BlockElevatorGooID, 0)).setHardness(0.0F).setLightValue(0.5F).setUnlocalizedName("ElevatorGoo");
+        BlockRapidMiner = (new BlockRapidMiner(BlockRapidMinerID, 3)).setHardness(0.0F).setLightValue(1.0F).setUnlocalizedName("Brown-RedGoo");
+        BlockBubble = (new BlockBubble(BlockBubbleID, 2)).setHardness(0.0F).setLightValue(0.1F).setUnlocalizedName("White-GreenGoo");
+        BlockOrangeRed = (new BlockOrangeRed(BlockOrangeRedID, 22)).setBlockUnbreakable().setLightValue(0.5F).setUnlocalizedName("OrangeRedGoo");
+        BlockOrangePurple = (new BlockOrangePurple(BlockOrangePurpleID, 21)).setBlockUnbreakable().setLightValue(0.5F).setUnlocalizedName("OrangePurpleGoo");
+        BlockOrangeWhite = (new BlockOrangeWhite(BlockOrangeWhiteID, 20)).setHardness(0.0F).setLightValue(0.5F).setUnlocalizedName("OrangeWhiteGoo");
+        BlockRapidEater = (new BlockRapidEater(BlockRapidEaterID, 23)).setHardness(0.0F).setLightValue(0.5F).setUnlocalizedName("PurpleRedGoo");
+        BlockBlack = (new BlockBlack(BlockBlackID, 16)).setHardness(0.0F).setLightValue(0.0F).setUnlocalizedName("Darkness");
+        BlockGravityGoo = (new BlockGravityGoo(BlockGravityGooID, 5)).setHardness(0.0F).setLightValue(0.5F).setUnlocalizedName("Yellow Goo");
+        BlockSubstrate = (new BlockSubstrate(BlockSubstrateID, 17).setHardness(0.0F).setLightValue(0.0F).setUnlocalizedName("fsgsfgyhewf"));
+        BlockRapidWaterEater = new BlockRapidWaterEater(BlockRapidWaterEaterID, 7).setHardness(0.0F).setLightValue(0.0F).setUnlocalizedName("fsgsfg897yhewf");
       
-    	GooPortal = (new GooPortal(GooPortalID, 56)).setHardness(0.9F).setLightValue(0.7F).setBlockName("GooPortal");
-        Coprocessor = (new Coprocessor(CoprocessorID, 53 , false)).setHardness(0.9F).setLightValue(0.0F).setBlockName("Coprocessor");
-        Programmer = (new Programmer(ProgrammerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setBlockName("Programmer");
-        Assembler = (new Assembler(AssemblerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setBlockName("Assembler");
-        Homogenizer = (new Homogenizer(HomogenizerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setBlockName("Homogenizer");
-        Compiler = (new Compiler(CompilerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setBlockName("Compiler");
-        EMPArray = (new EMPArray(EMPArrayID, 55)).setHardness(0.9F).setLightValue(1.0F).setBlockName("EMPArray");
-        EMPArraySecondary = (new EMPArraySecondary(EMPArraySecondaryID, 55)).setHardness(0.9F).setLightValue(0.0F).setBlockName("EMPArraySecondary");
+    	GooPortal = (new GooPortal(GooPortalID, 56)).setHardness(0.9F).setLightValue(0.7F).setUnlocalizedName("GooPortal");
+        Coprocessor = (new Coprocessor(CoprocessorID, 53 , false)).setHardness(0.9F).setLightValue(0.0F).setUnlocalizedName("Coprocessor");
+        Programmer = (new Programmer(ProgrammerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setUnlocalizedName("Programmer");
+        Assembler = (new Assembler(AssemblerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setUnlocalizedName("Assembler");
+        Homogenizer = (new Homogenizer(HomogenizerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setUnlocalizedName("Homogenizer");
+        Compiler = (new Compiler(CompilerID, 1, false)).setHardness(0.9F).setLightValue(0.0F).setUnlocalizedName("Compiler");
+        EMPArray = (new EMPArray(EMPArrayID, 55)).setHardness(0.9F).setLightValue(1.0F).setUnlocalizedName("EMPArray");
+        EMPArraySecondary = (new EMPArraySecondary(EMPArraySecondaryID, 55)).setHardness(0.9F).setLightValue(0.0F).setUnlocalizedName("EMPArraySecondary");
         
         
-        ItemNanoLens = (new ItemNanolens(ItemNanoLensID)).setItemName("NanoLens");
-        ItemNanoLathe = (new ItemNanoLathe(ItemNanoLatheID)).setItemName("NanoLathe");
-        ItemModifierGrey = (new ItemModifierGrey(ItemModifierGreyID)).setItemName("erfgdsfsdfg");
-        ItemModifierRed = (new ItemModifierRed(ItemModifierRedID)).setItemName("erfgsdfg");
-        ItemModifierYellow = (new ItemModifierYellow(ItemModifierYellowID)).setItemName("Browadfanwgoo");
-        ItemModifierPurple = (new ItemModifierPurple(ItemModifierPurpleID)).setItemName("aerew");
-        ItemModifierOrange = (new ItemModifierOrange(ItemModifierOrangeID)).setItemName("ererw");
-        ItemModifierBlue = (new ItemModifierBlue(ItemModifierBlueID)).setItemName("adfadf");
-        ItemModifierWhite = (new ItemModifierWhite(ItemModifierWhiteID)).setItemName("adadd");
-        ItemModifierGreen = (new ItemModifierGreen(ItemModifierGreenID)).setItemName("adfa");
-        ItemModifierBrown = (new ItemModifierBrown(ItemModifierBrownID)).setItemName("Brownwgoo");
+        ItemNanoLens = (new ItemNanolens(ItemNanoLensID)).setUnlocalizedName("NanoLens");
+        ItemNanoLathe = (new ItemNanoLathe(ItemNanoLatheID)).setUnlocalizedName("NanoLathe");
+        ItemModifierGrey = (new ItemModifierGrey(ItemModifierGreyID)).setUnlocalizedName("erfgdsfsdfg");
+        ItemModifierRed = (new ItemModifierRed(ItemModifierRedID)).setUnlocalizedName("erfgsdfg");
+        ItemModifierYellow = (new ItemModifierYellow(ItemModifierYellowID)).setUnlocalizedName("Browadfanwgoo");
+        ItemModifierPurple = (new ItemModifierPurple(ItemModifierPurpleID)).setUnlocalizedName("aerew");
+        ItemModifierOrange = (new ItemModifierOrange(ItemModifierOrangeID)).setUnlocalizedName("ererw");
+        ItemModifierBlue = (new ItemModifierBlue(ItemModifierBlueID)).setUnlocalizedName("adfadf");
+        ItemModifierWhite = (new ItemModifierWhite(ItemModifierWhiteID)).setUnlocalizedName("adadd");
+        ItemModifierGreen = (new ItemModifierGreen(ItemModifierGreenID)).setUnlocalizedName("adfa");
+        ItemModifierBrown = (new ItemModifierBrown(ItemModifierBrownID)).setUnlocalizedName("Brownwgoo");
       
         
-        ItemMatrixRed = (new ItemMatrixRed(ItemMatrixRedID)).setItemName("erfgsd4fg");
-        ItemMatrixYellow = (new ItemMatrixYellow(ItemMatrixYellowID)).setItemName("Browad4fanwgoo");
-        ItemMatrixPurple = (new ItemMatrixPurple(ItemMatrixPurpleID)).setItemName("ae4rew");
-        ItemMatrixOrange = (new ItemMatrixOrange(ItemMatrixOrangeID)).setItemName("er4erw");
-        ItemMatrixBlue = (new ItemMatrixBlue(ItemMatrixBlueID)).setItemName("adf4adf");
-        ItemMatrixWhite = (new ItemMatrixWhite(ItemMatrixWhiteID)).setItemName("a4dadd");
-        ItemMatrixGreen = (new ItemMatrixGreen(ItemMatrixGreenID)).setItemName("ad4fa");
-        ItemMatrixBrown = (new ItemMatrixBrown(ItemMatrixBrownID)).setItemName("Bro4wnwgoo");
-        ItemMatrixWhiteGreen = (new ItemMatrixWhiteGreen(ItemMatrixWhiteGreenID)).setItemName("a4dffdadd");
-        ItemMatrixBrownRed = (new ItemMatrixBrownRed(ItemMatrixBrownRedID)).setItemName("a4ggffdadd");
-        ItemMatrixBlueRed = (new ItemMatrixBlueRed(ItemMatrixBlueRedID)).setItemName("a4dghdadd");
-        ItemMatrixOrangeRed = (new ItemMatrixOrangeRed(ItemMatrixOrangeRedID)).setItemName("a4wwghgdadd");
-        ItemMatrixOrangeWhite = (new ItemMatrixOrangeRed(ItemMatrixOrangeWhiteID)).setItemName("a4ghrergdadd");
-        ItemMatrixOrangePurple = (new ItemMatrixOrangeRed(ItemMatrixOrangePurpleID)).setItemName("a4ereghgdadd");
-        ItemMatrixYellowRed = (new ItemMatrixYellowRed(ItemMatrixYellowRedID)).setItemName("Browad4fanwswegoo");
-        ItemMatrixPurpleRed = (new ItemMatrixPurpleRed(ItemMatrixPurpleRedID)).setItemName("Browad4fasfnwswegoo");
-        ItemMatrixGrey = (new ItemMatrixGrey(ItemMatrixGreyID)).setItemName("Browad4fasfnwserwerwegoo");
-        ItemMatrixRainbow = (new ItemMatrixRainbow(ItemMatrixRainbowID)).setItemName("Rainbow Matrix");
-        ItemMatrixGreenRed = (new ItemMatrixGreenRed(ItemMatrixGreenRedID)).setItemName("a4dghasddadd");
+        ItemMatrixRed = (new ItemMatrixRed(ItemMatrixRedID)).setUnlocalizedName("erfgsd4fg");
+        ItemMatrixYellow = (new ItemMatrixYellow(ItemMatrixYellowID)).setUnlocalizedName("Browad4fanwgoo");
+        ItemMatrixPurple = (new ItemMatrixPurple(ItemMatrixPurpleID)).setUnlocalizedName("ae4rew");
+        ItemMatrixOrange = (new ItemMatrixOrange(ItemMatrixOrangeID)).setUnlocalizedName("er4erw");
+        ItemMatrixBlue = (new ItemMatrixBlue(ItemMatrixBlueID)).setUnlocalizedName("adf4adf");
+        ItemMatrixWhite = (new ItemMatrixWhite(ItemMatrixWhiteID)).setUnlocalizedName("a4dadd");
+        ItemMatrixGreen = (new ItemMatrixGreen(ItemMatrixGreenID)).setUnlocalizedName("ad4fa");
+        ItemMatrixBrown = (new ItemMatrixBrown(ItemMatrixBrownID)).setUnlocalizedName("Bro4wnwgoo");
+        ItemMatrixWhiteGreen = (new ItemMatrixWhiteGreen(ItemMatrixWhiteGreenID)).setUnlocalizedName("a4dffdadd");
+        ItemMatrixBrownRed = (new ItemMatrixBrownRed(ItemMatrixBrownRedID)).setUnlocalizedName("a4ggffdadd");
+        ItemMatrixBlueRed = (new ItemMatrixBlueRed(ItemMatrixBlueRedID)).setUnlocalizedName("a4dghdadd");
+        ItemMatrixOrangeRed = (new ItemMatrixOrangeRed(ItemMatrixOrangeRedID)).setUnlocalizedName("a4wwghgdadd");
+        ItemMatrixOrangeWhite = (new ItemMatrixOrangeRed(ItemMatrixOrangeWhiteID)).setUnlocalizedName("a4ghrergdadd");
+        ItemMatrixOrangePurple = (new ItemMatrixOrangeRed(ItemMatrixOrangePurpleID)).setUnlocalizedName("a4ereghgdadd");
+        ItemMatrixYellowRed = (new ItemMatrixYellowRed(ItemMatrixYellowRedID)).setUnlocalizedName("Browad4fanwswegoo");
+        ItemMatrixPurpleRed = (new ItemMatrixPurpleRed(ItemMatrixPurpleRedID)).setUnlocalizedName("Browad4fasfnwswegoo");
+        ItemMatrixGrey = (new ItemMatrixGrey(ItemMatrixGreyID)).setUnlocalizedName("Browad4fasfnwserwerwegoo");
+        ItemMatrixRainbow = (new ItemMatrixRainbow(ItemMatrixRainbowID)).setUnlocalizedName("Rainbow Matrix");
+        ItemMatrixGreenRed = (new ItemMatrixGreenRed(ItemMatrixGreenRedID)).setUnlocalizedName("a4dghasddadd");
         
         
         OrangeWhiteRenderID = 65;
@@ -737,7 +737,7 @@ public class mod_GreyGoo
         NeverRestoreThese.add(this.EMPArraySecondaryID);
         NeverRestoreThese.add(Block.blockEmerald.blockID);
         NeverRestoreThese.add(Block.blockDiamond.blockID);
-        NeverRestoreThese.add(Block.blockSteel.blockID);
+        NeverRestoreThese.add(Block.blockIron.blockID);
         NeverRestoreThese.add(Block.blockGold.blockID);
         NeverRestoreThese.add(Block.blockLapis.blockID);
         NeverRestoreThese.add(Block.oreCoal.blockID);
@@ -749,7 +749,7 @@ public class mod_GreyGoo
         NeverRestoreThese.add(Block.glowStone.blockID);
         NeverRestoreThese.add(Block.oreRedstone.blockID);
         NeverRestoreThese.add(Block.oreLapis.blockID);
-        NeverRestoreThese.add(Block.doorSteel.blockID);
+        NeverRestoreThese.add(Block.doorIron.blockID);
         NeverRestoreThese.add(Block.doorWood.blockID);
         NeverRestoreThese.add(Block.vine.blockID);
         NeverRestoreThese.add(Block.waterStill.blockID);
@@ -765,8 +765,8 @@ public class mod_GreyGoo
    
 
         
-        
-        FreezerTexture = this.BlockFreezer.blockIndexInTexture;
+        //Deprecated @ 1.5.1
+        //FreezerTexture = this.BlockFreezer.blockIndexInTexture;
         FreezerOpacity = this.BlockFreezer.lightOpacity[BlockFreezerID];
         FreezerLight = this.BlockFreezer.lightValue[BlockFreezerID];
         EntityRegistry.registerModEntity(EntityFallingGravityGoo.class, "FallingGravityGoo", BlockGravityGooID, this, 64, 20, true);

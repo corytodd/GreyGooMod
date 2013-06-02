@@ -16,15 +16,10 @@ public class BlockCleaner extends Block
 
     protected BlockCleaner(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         random = new Random();
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private int numgen4(Random random1)
@@ -85,12 +80,12 @@ public class BlockCleaner extends Block
                 {
                     if (Math.abs(j1) + Math.abs(l) + Math.abs(i1) < 3 && mod_GreyGoo.cleanerList.contains(world.getBlockId(i + l, j + i1, k + j1)))
                     {
-                        world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                        world.setBlock(i + l, j + i1, k + j1, blockID);
                     }
 
                     if (!flag && Math.abs(j1) + Math.abs(l) + Math.abs(i1) != 0 && world.getBlockId(i + l, j + i1, k + j1) == this.blockID)
                     {
-                        world.setBlockWithNotify(i + l, j + i1, k + j1, 0);
+                        world.setBlock(i + l, j + i1, k + j1, 0);
                     }
 
                     if (flag && k1 == 1)
@@ -118,7 +113,7 @@ public class BlockCleaner extends Block
 
     private void decay(World world, int i, int j, int k)
     {
-        world.setBlockWithNotify(i, j, k, 0);
+        world.setBlock(i, j, k, 0);
     }
 
     public void updateTick(World world, int i, int j, int k, Random random1)

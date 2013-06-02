@@ -12,22 +12,9 @@ public class BlockFreezer extends Block
 {
     protected BlockFreezer(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-
-    {
-        if (this.blockIndexInTexture == 11 || this.blockIndexInTexture == 0)
-        {
-            return "/GooBlockTextures.png";
-        }
-        else
-        {
-            return "/terrain.png";
-        }
     }
 
     private Random random = new Random();
@@ -57,7 +44,7 @@ public class BlockFreezer extends Block
                     {
                         if (mod_GreyGoo.cleanerList.contains(world.getBlockId(i + l, j + i1, k + j1)) && world.getBlockId(i + l, j + i1, k + j1) != this.blockID)
                         {
-                            world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            world.setBlock(i + l, j + i1, k + j1, blockID);
                             world.scheduleBlockUpdate(i + l, j + i1, k + j1, blockID, random.nextInt(25)+random.nextInt(4));
                         }
                     }

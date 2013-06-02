@@ -74,7 +74,7 @@ public class TileEntityCancer2 extends TileEntity
             {
             	if(worldObj.getClosestPlayer(xCoord, yCoord, zCoord, 3)==null)
             	{
-                worldObj.setBlockWithNotify(x, y, z, mod_GreyGoo.BlockCancer2ID);
+                worldObj.setBlock(x, y, z, mod_GreyGoo.BlockCancer2ID);
             	}
             }
         }

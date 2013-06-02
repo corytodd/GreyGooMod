@@ -163,6 +163,18 @@ public class GooChunkProvider implements IChunkProvider
 			
 		}
 
+		@Override
+		public boolean unloadQueuedChunks() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void func_104112_b() {
+			// TODO Auto-generated method stub
+			
+		}
+
 		
 
 		

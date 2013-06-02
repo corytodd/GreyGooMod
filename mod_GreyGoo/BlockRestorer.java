@@ -18,19 +18,15 @@ public class BlockRestorer extends Block
 
     protected BlockRestorer(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
         
     }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
-    }
-    @Override
-    public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving) 
-    {
+
+    //@Override
+    // public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving) 
+    //{
     //	if(par5EntityLiving instanceof EntityPlayerMP&&!par1World.isRemote)
     //	{
     		
@@ -38,9 +34,7 @@ public class BlockRestorer extends Block
     	
     //	}
     	
-    	
-    	
-    }   
+    //}   
     
     
     private void restore(World world, int i, int j, int k)
@@ -68,20 +62,20 @@ public class BlockRestorer extends Block
         {
     		if(mod_GreyGoo.NeverRestoreThese.contains(backupBlockID))
    		 	{
-    			world.setBlockWithNotify(i, j, k,0);
+    			world.setBlock(i, j, k,0);
     			
-    			//backup.setBlockWithNotify(i, j, k,Block.stone.blockID);
+    			//backup.setBlock(i, j, k,Block.stone.blockID);
 
    		 	}
     		else
     		{
     			//System.out.println("shouldReplace");
-    			world.setBlockAndMetadataWithNotify(i, j, k,backupBlockID,backupMetadata);
+    			world.setBlock(i, j, k,backupBlockID,backupMetadata, 2);
     		}
         }
     	else if((world.getBlockMetadata(i, j, k)==2)&&world.getBlockId(i, j, k)==this.blockID)
     			{
-    				world.setBlockAndMetadataWithNotify(i, j, k,backupBlockID,backupMetadata);
+    				world.setBlock(i, j, k,backupBlockID,backupMetadata, 2);
     			}
     	
         
@@ -111,8 +105,8 @@ public class BlockRestorer extends Block
                         	 {
                         		 mod_GreyGoo.instance.spreadLimiter.Restorerspreadlimiter(true);
                         		 
-                        		 world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
-                        		 world.setBlockMetadata(i + l, j + i1, k + j1,0);
+                        		 world.setBlock(i + l, j + i1, k + j1, blockID);
+                        		 world.setBlock(i + l, j + i1, k + j1,0);
                         		 world.scheduleBlockUpdate(i + l, j + i1, k + j1, blockID, random.nextInt(25)+random.nextInt(10));
                         	 }
                         	 else
@@ -141,11 +135,11 @@ public class BlockRestorer extends Block
         	 if(flag&&world.getBlockId(i, j, k)==this.blockID)
         	 {
         		 
-        		 world.setBlockMetadataWithNotify(i, j, k, 1);
+        		 world.setBlock(i, j, k, 1);
         	 }
         	 else if(flag1&&world.getBlockId(i, j, k)==this.blockID)
         	 {
-        		 world.setBlockMetadataWithNotify(i, j, k, 2);
+        		 world.setBlock(i, j, k, 2);
         	 }
         	 
            	 world.scheduleBlockUpdate(i , j , k , blockID, random.nextInt(25)+random.nextInt(10));
@@ -163,7 +157,7 @@ public class BlockRestorer extends Block
     private void decay(World world, int i, int j, int k)
     {
     	
-    		//world.setBlockWithNotify(i, j, k, 0);
+    		//world.setBlock(i, j, k, 0);
     	
 
     }

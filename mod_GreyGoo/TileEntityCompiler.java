@@ -475,4 +475,16 @@ public class TileEntityCompiler extends TileEntity implements IInventory, ISided
     {
         return 1;
     }
+
+	@Override
+	public boolean isInvNameLocalized() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

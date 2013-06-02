@@ -11,14 +11,9 @@ public class BlockWaterEater extends Block
 {
     protected BlockWaterEater(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private void assimilate(World world, int i, int j, int k)
@@ -45,7 +40,7 @@ public class BlockWaterEater extends Block
                         if ((world.getBlockId(i + l, j + i1, k + j1) == Block.waterMoving.blockID || world.getBlockId(i + l, j + i1, k + j1) == Block.waterStill.blockID || world.getBlockId(i + l, j + i1, k + j1) == Block.lavaMoving.blockID || world.getBlockId(i + l, j + i1, k + j1) == Block.lavaStill.blockID) && Math.abs(l) + Math.abs(i1) + Math.abs(j1) == 1)
                         {
                             noFood = false;
-                            world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            world.setBlock(i + l, j + i1, k + j1, blockID);
                             mod_GreyGoo.instance.spreadLimiter.spreadLimiter(true);
                         }
                     }
@@ -58,7 +53,7 @@ public class BlockWaterEater extends Block
 
             if (noFood)
             {
-                world.setBlockMetadata(i, j, k, 2);
+                world.setBlock(i, j, k, 2);
             }
         }
     }

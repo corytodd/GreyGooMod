@@ -14,15 +14,10 @@ public class BlockOrangeRed extends Block
 
     protected BlockOrangeRed(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         grew1 = 0;
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private int numgen4(Random random)
@@ -78,7 +73,7 @@ public class BlockOrangeRed extends Block
                     {
                         if (world.getBlockId(i + l, j + i1, k + j1) != mod_GreyGoo.BlockInert.blockID && Math.abs(l) + Math.abs(j1) + Math.abs(i1) < 2 && world.getBlockId(i + l , j + i1 , k + j1 ) != this.blockID)
                         {
-                            world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            world.setBlock(i + l, j + i1, k + j1, blockID);
                             world.scheduleBlockUpdate(i + l, j + i1, k + j1, blockID, random.nextInt(3)+rand.nextInt(3)+rand.nextInt(3));
                         }
                     }

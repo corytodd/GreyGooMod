@@ -132,10 +132,10 @@ public class CommonProxy implements IGuiHandler
                 mod_GreyGoo.instance.GooActive = nbttagcompound.getBoolean("GooActive");
             }
 
-            if (nbttagcompound.hasKey("FreezerTexture"))
-            {
-                mod_GreyGoo.instance.BlockFreezer.blockIndexInTexture = nbttagcompound.getInteger("FreezerTexture");
-            }
+//            if (nbttagcompound.hasKey("FreezerTexture"))
+//            {
+//                mod_GreyGoo.instance.BlockFreezer.blockIndexInTexture = nbttagcompound.getInteger("FreezerTexture");
+//            }
 
             fileinputstream.close();
         }

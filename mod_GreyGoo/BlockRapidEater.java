@@ -11,14 +11,9 @@ public class BlockRapidEater extends Block
 {
     protected BlockRapidEater(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private Random random = new Random();
@@ -40,7 +35,7 @@ public class BlockRapidEater extends Block
                     {
                         if (world.getBlockId(i + l, j + i1, k + j1) == mod_GreyGoo.BlockCleanerID)
                         {
-                            world.setBlockWithNotify(i , j, k , mod_GreyGoo.BlockCleanerID);
+                            world.setBlock(i , j, k , mod_GreyGoo.BlockCleanerID);
                             continue;
                         }
 
@@ -50,7 +45,7 @@ public class BlockRapidEater extends Block
                         }
                         else
                         {
-                            world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            world.setBlock(i + l, j + i1, k + j1, blockID);
                         }
 
                         world.scheduleBlockUpdate(i + l, j + i1, k + j1, blockID, random.nextInt(25)+random.nextInt(4));

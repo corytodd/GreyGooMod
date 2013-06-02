@@ -13,9 +13,4 @@ public class ItemModifierWhite extends Item
         this.setCreativeTab(CreativeTabs.tabMaterials);
     }
 
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooItemTextures.png";
-    }
 }

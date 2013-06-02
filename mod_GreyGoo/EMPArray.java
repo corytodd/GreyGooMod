@@ -13,14 +13,9 @@ public class EMPArray extends BlockContainer
 {
     protected EMPArray(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     public int quantityDropped(Random par1Random)

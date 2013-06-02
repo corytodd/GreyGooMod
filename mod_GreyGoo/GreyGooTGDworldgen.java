@@ -27,7 +27,7 @@ public class GreyGooTGDworldgen implements IWorldGenerator
 
             if (mod_GreyGoo.instance.TGDbloom)
             {
-                world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockTGD.blockID);
+                world.setBlock(i, j, k, mod_GreyGoo.BlockTGD.blockID);
             }
         }
 
@@ -38,7 +38,7 @@ public class GreyGooTGDworldgen implements IWorldGenerator
 
             if (mod_GreyGoo.instance.TGDbloom)
             {
-                world.setBlockWithNotify(i, 30, k, mod_GreyGoo.BlockTGD.blockID);
+                world.setBlock(i, 30, k, mod_GreyGoo.BlockTGD.blockID);
             }
         }
 
@@ -47,7 +47,7 @@ public class GreyGooTGDworldgen implements IWorldGenerator
             if (random.nextInt(900) == 1)
             {
                 mod_GreyGoo.instance.proxy.printStringClient("The Great Destroyer has awoken...");
-                world.setBlockWithNotify(i, 30, k, mod_GreyGoo.BlockTGD.blockID);
+                world.setBlock(i, 30, k, mod_GreyGoo.BlockTGD.blockID);
             }
 
             if (random.nextInt(2) == 1)
@@ -63,7 +63,7 @@ public class GreyGooTGDworldgen implements IWorldGenerator
                             mod_GreyGoo.instance.proxy.printStringClient("Plague Spawn");
                         }
 
-                        world.setBlockWithNotify(i, rand, k, mod_GreyGoo.BlockCancer2.blockID);
+                        world.setBlock(i, rand, k, mod_GreyGoo.BlockCancer2.blockID);
                         world.scheduleBlockUpdate(i, rand, k, mod_GreyGoo.BlockCancer2ID, 60);
                     }
                 }
@@ -76,7 +76,7 @@ public class GreyGooTGDworldgen implements IWorldGenerator
                     mod_GreyGoo.instance.proxy.printStringClient("Darkness spawn");
                 }
 
-                world.setBlockWithNotify(i, 60, k, mod_GreyGoo.BlockBlack.blockID);
+                world.setBlock(i, 60, k, mod_GreyGoo.BlockBlack.blockID);
             }
 
             if (random.nextInt(150) == 1)
@@ -90,7 +90,7 @@ public class GreyGooTGDworldgen implements IWorldGenerator
                         mod_GreyGoo.instance.proxy.printStringClient("Tumor Spawn");
                     }
 
-                    world.setBlockWithNotify(i, rand, k, mod_GreyGoo.BlockCancer.blockID);
+                    world.setBlock(i, rand, k, mod_GreyGoo.BlockCancer.blockID);
                     world.scheduleBlockUpdate(i, rand, k, mod_GreyGoo.BlockCancer.blockID, 60);
                 }
             }

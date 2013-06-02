@@ -137,7 +137,7 @@ public class EntityTGDGolem extends EntityGolem
 
         if (this.worldObj.getBlockId(i , j , k) != Block.chest.blockID && this.worldObj.getBlockId(i, j, k) != mod_GreyGoo.BlockCancerID && this.worldObj.getBlockId(i, j, k) != mod_GreyGoo.BlockCancer2ID && this.worldObj.getBlockId(i, j, k) != mod_GreyGoo.BlockTGDinertID && this.worldObj.getBlockId(i, j, k) != 0 && this.worldObj.getBlockId(i, j, k) != mod_GreyGoo.BlockCleanerID)
         {
-            this.worldObj.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockTGDinertID);
+            this.worldObj.setBlock(i, j, k, mod_GreyGoo.BlockTGDinertID);
         }
 
         int xr = this.rand.nextInt(20);

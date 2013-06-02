@@ -12,16 +12,11 @@ public class BlockBubble extends Block
 {
     protected BlockBubble(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
     Random random = new Random();
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
-    }
 
     private void assimilate(World world, int i, int j, int k)
     {
@@ -46,7 +41,7 @@ public class BlockBubble extends Block
 
                         if (world.isAirBlock(i + l, j + i1, k + j1) && Math.abs(l) + Math.abs(i1) + Math.abs(j1) < 2 && world.getBlockLightValue(i + l, j + i1, k + j1) > 9)
                         {
-                            world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            world.setBlock(i + l, j + i1, k + j1, blockID);
                             world.scheduleBlockUpdate(i + l, j + i1, k + j1, blockID, random.nextInt(15));
                         }
                     }

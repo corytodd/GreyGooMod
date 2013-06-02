@@ -17,12 +17,12 @@ public class GooTeleporter extends Teleporter
 	     */
 	   
 	    @Override
-	    public boolean func_85188_a(Entity par1Entity)
+	    public boolean makePortal(Entity par1Entity)
 	    {
 	    	return true;
 	    }
 	    @Override
-	    public void func_85189_a(long par1)
+	    public void removeStalePortalLocations(long par1)
 	    {
 	    
 	    }

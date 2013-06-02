@@ -11,14 +11,9 @@ public class BlockRapidWaterEater extends Block
 {
     protected BlockRapidWaterEater(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
     }
 
     private Random random = new Random();
@@ -45,7 +40,7 @@ public class BlockRapidWaterEater extends Block
 
                         if ((world.getBlockId(i + l, j + i1, k + j1) == waterStill.blockID) || (world.getBlockId(i + l, j + i1, k + j1) == waterMoving.blockID) || (world.getBlockId(i + l, j + i1, k + j1) == lavaStill.blockID) || (world.getBlockId(i + l, j + i1, k + j1) == lavaMoving.blockID))
                         {
-                            world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                            world.setBlock(i + l, j + i1, k + j1, blockID);
                         }
 
                         world.scheduleBlockUpdate(i + l, j + i1, k + j1, blockID, random.nextInt(25)+random.nextInt(4));
@@ -95,7 +90,7 @@ public class BlockRapidWaterEater extends Block
         if (!world.isRemote && !entityplayer.isSneaking())
         {
             mod_GreyGoo.RapidWaterEaterisSpreading = true;
-            world.setBlockMetadataWithNotify(i, j, k, 0);
+            world.setBlock(i, j, k, 0);
             mine(world, i, j, k);
             world.scheduleBlockUpdate(i+1, j, k, this.blockID, random.nextInt(5));
             world.scheduleBlockUpdate(i, j, k+1, this.blockID, random.nextInt(5));

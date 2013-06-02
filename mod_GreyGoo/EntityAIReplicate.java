@@ -65,12 +65,12 @@ public class EntityAIReplicate extends EntityAIBase
                 int x = MathHelper.floor_double(this.golemX);
                 int z =  MathHelper.floor_double(this.golemZ);
                 int y = MathHelper.floor_double(this.golemY);
-                this.theWorld.setBlockWithNotify(MathHelper.floor_double(this.golemX) + 2,  y,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
-                this.theWorld.setBlockWithNotify(MathHelper.floor_double(this.golemX) + 2,  y + 1,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
-                this.theWorld.setBlockWithNotify(MathHelper.floor_double(this.golemX) + 2,  y + 2,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
-                this.theWorld.setBlockWithNotify(MathHelper.floor_double(this.golemX) + 2,  y + 3,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
-                this.theWorld.setBlockWithNotify(MathHelper.floor_double(this.golemX) + 1,  y + 2,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
-                this.theWorld.setBlockWithNotify(MathHelper.floor_double(this.golemX) + 3,  y + 2,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
+                this.theWorld.setBlock(MathHelper.floor_double(this.golemX) + 2,  y,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
+                this.theWorld.setBlock(MathHelper.floor_double(this.golemX) + 2,  y + 1,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
+                this.theWorld.setBlock(MathHelper.floor_double(this.golemX) + 2,  y + 2,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
+                this.theWorld.setBlock(MathHelper.floor_double(this.golemX) + 2,  y + 3,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
+                this.theWorld.setBlock(MathHelper.floor_double(this.golemX) + 1,  y + 2,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
+                this.theWorld.setBlock(MathHelper.floor_double(this.golemX) + 3,  y + 2,  MathHelper.floor_double(this.golemZ) + 2, mod_GreyGoo.BlockTGDinertID);
             	}
             }
         }

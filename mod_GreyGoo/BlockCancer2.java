@@ -20,15 +20,9 @@ public class BlockCancer2 extends BlockContainer
     private boolean hasTicked;
     Random random = new Random();
 
-    @Override
-    public String getTextureFile()
-    {
-        return "/GooBlockTextures.png";
-    }
-    
     protected BlockCancer2(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, Material.ground);
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
@@ -86,7 +80,7 @@ public class BlockCancer2 extends BlockContainer
                 {
                     if (world.getBlockId(i + l, j + i1, k + j1) == mod_GreyGoo.BlockCleaner.blockID)
                     {
-                        world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockCleaner.blockID);
+                        world.setBlock(i, j, k, mod_GreyGoo.BlockCleaner.blockID);
                         continue;
                     }
 
@@ -98,7 +92,7 @@ public class BlockCancer2 extends BlockContainer
                          {
                     		 mod_GreyGoo.instance.spreadLimiter.Destroyerspreadlimiter(true);
 
-                    		 world.setBlockWithNotify(i + l, j + i1, k + j1, blockID);
+                    		 world.setBlock(i + l, j + i1, k + j1, blockID);
 
                        
                          }
@@ -106,7 +100,7 @@ public class BlockCancer2 extends BlockContainer
                     	 {
                     		 mod_GreyGoo.instance.spreadLimiter.Destroyerspreadlimiter(true);
 
-                    		 world.setBlockWithNotify(i + l, j + i1, k + j1, blockID); 
+                    		 world.setBlock(i + l, j + i1, k + j1, blockID); 
                     	 }
                     }
                 }
@@ -132,12 +126,12 @@ public class BlockCancer2 extends BlockContainer
 
             if (hasTicked && !world.isRemote)
             {
-                world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockTGD.blockID);
+                world.setBlock(i, j, k, mod_GreyGoo.BlockTGD.blockID);
             }
         }
         if(!hasFood&&world.getClosestPlayer(i, j, k, 20)==null)
         {
-        	world.setBlockMetadata(i, j, k, 2);
+        	world.setBlock(i, j, k, 2);
         	world.removeBlockTileEntity(i, j, k);
         	
         }
@@ -191,7 +185,7 @@ public class BlockCancer2 extends BlockContainer
 
             if (hasTicked && !world.isRemote)
             {
-                world.setBlockWithNotify(i, j, k, mod_GreyGoo.BlockTGD.blockID);
+                world.setBlock(i, j, k, mod_GreyGoo.BlockTGD.blockID);
             }
         }
     }
