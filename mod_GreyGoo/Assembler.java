@@ -4,6 +4,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.item.EntityItem;
@@ -33,6 +34,12 @@ public class Assembler extends BlockContainer
         super(par1, Material.rock);
         this.isActive = par2;
         this.setCreativeTab(CreativeTabs.tabBlock);
+    }
+    
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:Assembler");
     }
 
     public int idDropped(int par1, Random par2Random, int par3)

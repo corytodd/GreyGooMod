@@ -3,6 +3,7 @@ import net.minecraft.block.Block;
 import java.util.Random;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
@@ -14,6 +15,12 @@ public class EMPArraySecondary extends Block
         setTickRandomly(false);
     }
 
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:top_1");
+    }
+    
     public int quantityDropped(Random par1Random)
     {
         return 1;

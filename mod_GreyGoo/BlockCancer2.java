@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -37,6 +38,12 @@ public class BlockCancer2 extends BlockContainer
         {
             return 0;
         }
+    }
+    
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:Tumor");
     }
 
     private void assimilate(World world, int i, int j, int k)

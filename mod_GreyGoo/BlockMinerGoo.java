@@ -3,6 +3,7 @@ package StevenGreyGoo.mod_GreyGoo;
 import java.util.Random;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -16,6 +17,12 @@ public class BlockMinerGoo extends Block
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
 
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:RapidMiner");
+    }
+    
     protected void mine(World world, int i, int j, int k)
     {
         if (world.getBlockMetadata(i, j, k) != 2)

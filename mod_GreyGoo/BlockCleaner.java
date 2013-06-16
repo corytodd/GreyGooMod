@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,6 +21,12 @@ public class BlockCleaner extends Block
         random = new Random();
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
+    }
+    
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:Cleaner");
     }
 
     private int numgen4(Random random1)

@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -19,6 +20,12 @@ public class BlockGravityGoo extends Block
         super(par1, Material.sand);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.setTickRandomly(false);
+    }
+    
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:top_1");
     }
 
     public void onBlockAdded(World par1World, int par2, int par3, int par4)

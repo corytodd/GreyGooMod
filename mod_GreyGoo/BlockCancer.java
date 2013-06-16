@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -17,7 +18,12 @@ public class BlockCancer extends Block
         setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
-
+    
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:Tumor");
+    }
     private void assimilate(World world, int i, int j, int k)
     {
        

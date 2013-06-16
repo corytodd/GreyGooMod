@@ -3,6 +3,7 @@ package StevenGreyGoo.mod_GreyGoo;
 import java.util.Random;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -18,6 +19,12 @@ public class BlockOrangeRed extends Block
         grew1 = 0;
         setTickRandomly(false);
         this.setCreativeTab(CreativeTabs.tabBlock);
+    }
+    
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:NewWall");
     }
 
     private int numgen4(Random random)

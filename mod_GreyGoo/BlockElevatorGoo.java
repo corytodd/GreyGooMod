@@ -2,6 +2,7 @@ package StevenGreyGoo.mod_GreyGoo;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
 
@@ -11,6 +12,12 @@ public class BlockElevatorGoo extends Block
     {
         super(i, Material.ground);
         setTickRandomly(false);
+    }
+    
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+             this.blockIcon = par1IconRegister.registerIcon("greygoo:ElevatorGoo");
     }
 
     private void elevate(World world, int i, int j, int k)

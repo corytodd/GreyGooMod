@@ -12,5 +12,7 @@ public class ItemMatrixBlueRed extends Item
         this.setMaxDamage(0);
         this.setCreativeTab(CreativeTabs.tabMaterials);
     }
+    
+    
 
 }
